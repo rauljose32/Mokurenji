@@ -1,0 +1,147 @@
+CREATE DATABASE ProjetoIntegrador;﻿
+
+CREATE TABLE identificador
+(
+    ididentificador int NOT NULL primary key,
+    idservico integer,
+    descricao character varying(25)
+);
+
+CREATE TABLE interface
+(
+    idinterface serial NOT NULL,
+    identificador int NOT NULL,
+    nome character varying(20),
+    ip character varying(20),
+    mascara character varying(20),
+    flag boolean default true, 
+    CONSTRAINT interface_pkey PRIMARY KEY (idinterface),
+    CONSTRAINT indetificador_fk FOREIGN KEY (identificador)
+        REFERENCES identificador (ididentificador)
+);
+
+
+CREATE TABLE rotadefault
+(
+    iddefault serial NOT NULL,
+    identificador int NOT NULL,
+    gateway character varying(20),
+    flag boolean default true, 
+    CONSTRAINT rotadefault_pkey PRIMARY KEY (iddefault),
+    CONSTRAINT indetificador_fk FOREIGN KEY (identificador)
+        REFERENCES identificador (ididentificador)
+);
+
+CREATE TABLE rotahost
+(
+    idhost serial NOT NULL,
+    identificador int NOT NULL,
+    hostdestino character varying(20),
+    gateway character varying(20),
+    flag boolean default true, 
+    CONSTRAINT rotahost_pkey PRIMARY KEY (idhost),
+    CONSTRAINT indetificador_fk FOREIGN KEY (identificador)
+        REFERENCES identificador (ididentificador)
+);
+
+CREATE TABLE rotarede
+(
+    idrede serial NOT NULL,
+    identificador int NOT NULL,
+    rededestino character varying(20),
+    mascara character varying(20),
+    gateway character varying(20),
+    flag boolean default true, 
+    CONSTRAINT rotarede_pkey PRIMARY KEY (idrede),
+    CONSTRAINT indetificador_fk FOREIGN KEY (identificador)
+        REFERENCES identificador (ididentificador)
+);
+
+CREATE TABLE natentrada
+(
+    idnatentrada serial NOT NULL,
+    identificador int NOT NULL,
+    iporigem character varying(20),
+    portaorigem integer,
+    ipdestino character varying(20),
+    portadestino integer,
+    flag boolean default true, 
+    CONSTRAINT natentrada_pkey PRIMARY KEY (idnatentrada),
+    CONSTRAINT indetificador_fk FOREIGN KEY (identificador)
+        REFERENCES identificador (ididentificador)
+);
+
+CREATE TABLE natsaida
+(
+    idnatsaida serial NOT NULL,
+    identificador int NOT NULL,
+    interface character varying(20),
+    flag boolean default true, 
+    CONSTRAINT natsaida_pkey PRIMARY KEY (idnatsaida),
+    CONSTRAINT indetificador_fk FOREIGN KEY (identificador)
+        REFERENCES identificador (ididentificador)
+);
+
+
+CREATE TABLE vpn
+(
+    idvpn serial NOT NULL,
+    identificador int NOT NULL,
+    ippontaa character varying(20),
+    ippontab character varying(20),
+    iptunel character varying(20),
+    porta integer,
+    flag boolean default true, 
+    CONSTRAINT vpn_pkey PRIMARY KEY (idvpn),
+    CONSTRAINT indetificador_fk FOREIGN KEY (identificador)
+        REFERENCES identificador (ididentificador)
+);
+
+CREATE TABLE hostapd
+(
+    idhostapd serial NOT NULL,
+    identificador int NOT NULL,
+    nomeinterface character varying(20),
+    nomeredewifi character varying(20),
+    canal integer,
+    flag boolean default true, 
+    CONSTRAINT hostapd_pkey PRIMARY KEY (idhostapd),
+    CONSTRAINT indetificador_fk FOREIGN KEY (identificador)
+        REFERENCES identificador (ididentificador)
+);
+
+CREATE TABLE dhcpd
+(
+    iddhcpd serial NOT NULL primary key,
+    identificador int NOT NULL,
+    enderecosubrede character varying(20),
+    mascarasubrede character varying(20),
+    rangeinicio character varying(20),
+    rangefinal character varying(20),
+    gateway character varying(20),
+    broadcast character varying(20),
+    flag boolean default true,  
+    CONSTRAINT indetificador_fk FOREIGN KEY (identificador)
+        REFERENCES identificador (ididentificador)
+);
+
+
+CREATE TABLE usuario
+(
+    idusuario serial NOT NULL primary key,
+    nome character varying(20),
+    senha character varying(15)
+);
+
+
+INSERT INTO identificador (ididentificador, IDSERVICO, DESCRICAO) VALUES 
+
+(11,11, 'ADD - INTERFACE'), (12,12, 'DEL - INTERFACE'),
+(21,21, 'ADD - ROTA DEFAULT'),(22,22, 'DEL - ROTA DEFAULT'),
+(31,31, 'ADD - ROTA HOST'),(32,32, 'DEL - ROTA HOST'),
+(41,41, 'ADD - ROTA REDE'), (42,42, 'DEL - ROTA REDE'), 
+(51,51, 'ADD - NAT ENTRADA'), (52,52, 'DEL - NAT ENTRADA'),
+(61,61, 'ADD - NAT SAIDA'), (62,62, 'DEL - NAT SAIDA'), 
+(71,71, 'ADD - VPN'), (72,72, 'DEL - VPN'), 
+(81,81, 'ADD - HOSTAPD'), (82,82, 'DEL - HOSTAPD'),
+(91,91, 'ADD - DHCPD'), (92,92, 'DEL - DHCPD'); 

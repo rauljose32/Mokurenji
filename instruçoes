@@ -1,0 +1,9 @@
+
+/home/raul/glassfish5/glassfish/domains/domain1/lib/
+
+
+
+glassfish configurar
+glassfish5/bin/ (Caminho para acessar)
+./asadmin stop-domain	  (Comando para Parar)
+./asadmin start-domain	  (Comando para Iniciar)

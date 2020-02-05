@@ -1,0 +1,744 @@
+@charset 'iso-8859-15';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*INDEX*/
+#menu_superior
+{
+    height: 20%;
+}
+#opcoes 
+{
+    margin-left: 15%;
+    margin-top: 2%;
+    height: 60%;
+    width: 70%;
+}
+
+h1
+{
+    margin-top: 1%;
+    margin-left: 10%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Geneva, Tahoma, sans-serif;
+    color: #5D6772;
+}
+#menu_superior p{
+    margin-top:3%;
+    text-align: center;
+    color: gray;
+}
+#perfil_user p{
+    margin-top:5%;
+    text-align: center;
+    color: gray;
+}
+a div p{
+    font-family: 'Courier New', Courier, monospace;
+    color:#5D6772;
+    text-align: center;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+    outline:none;
+}
+img{
+    margin-top: 1%;
+    margin-left: 35%;
+    width:30%;
+    height:65%;
+}
+
+a > div:hover{
+    background-color: #DBE4FE;
+    cursor: pointer;
+}
+a > div{
+         background-color: #EEF0F6;
+}
+/*INDEX*/
+/*MENU*/
+#menu-icone {
+    position: absolute;
+    right: 1rem;
+    margin-right: 50%;
+    margin-top: 2%;
+    cursor: pointer;
+    border: 2;
+    
+}
+
+#menu-icone div {
+    width: 35px;
+    height: 5px;
+    margin: 5px 0;
+    background: #A7B4C8;
+    border-radius: 1em;
+    
+}
+#content{
+    height: 70%;
+}
+/*MENU*/
+@media screen and (min-width: 100px) {
+    /*Index*/
+    #menu_rotas_content{
+        display: none;
+        
+    }
+    a > div
+    {
+        min-width: 25%;
+        height: 30%;
+        display: block;
+        margin-left: 5%;
+        margin-top: 5%;
+        border-radius: 7%;
+    }
+    a div p{
+        font-size: 15px;
+    }
+    #menu_superior > p{
+        display: none;
+    }
+    /*Index*/
+    /*Menus - Responsividade aos botões*/
+    #div_menu_superior p{ display: none; }
+    #demo_icon{
+        display: none;
+    }
+    /*Menus - Responsividade aos botões*/
+}
+@media screen and (min-width: 600px) {
+    /*Index*/
+    a > div
+    {
+        width: 45%;
+        display: inline-block;
+        margin-left: 3%;
+        margin-top: 5%;
+        border-radius: 7%;
+    }
+    a div p{
+        font-size: 15px;
+    }
+    #menu_superior > p{
+        display: none;
+    }
+    /*Index*/
+    /*Menus - Responsividade aos botões*/
+    /*Menus - Responsividade aos botões*/
+}
+@media screen and (min-width: 900px) {
+    /*Index*/
+    a > div
+    {
+        height: 40%;
+        display: inline-block;
+        width: 30%;
+        margin-left: 2%;
+        margin-top: 2%;
+        border-radius: 7%;
+    }
+    a div p{
+        font-size: 15px;
+    }
+    #menu_superior > p{
+        display: none;
+    }
+   
+    /*Index*/
+    /*Menus - Responsividade aos botões*/
+    /*Menus - Responsividade aos botões*/
+}
+@media screen and (min-width: 700px) {
+    /*Index*/
+    
+    #menu_rotas_content{
+        display: block;
+    }
+    #menu_superior > p{
+        display: block;
+    }
+    /*Index*/
+    #menu-icone{ display: none; }
+    
+    #div_menu_superior p{ display: block; }
+    #demo_icon{
+        display: block;
+    }
+}
+/*Menus - Responsividade aos botões*/
+#menu_superior_submenu{
+    height: 30%;
+}
+#menu_superior_submenu #sub_menu
+{
+    margin-top: -2.35%;
+    margin-left: -0.3%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Geneva, Tahoma, sans-serif;
+    color: #5D6772;
+    font-size: 24px;
+}
+#div_menu_superior p{
+    font-family: 'Courier New', Courier, monospace;
+    color: #5D6772;
+    text-decoration: none;
+    margin-top:-8%;
+    /*margin-right: 50%;*/
+    font-size: 18px;
+
+}
+
+#demo_icon
+{
+    width: 10%;
+    height: 80%;
+    margin-left: 1%;
+    margin-top: 0.5%;
+}
+#section_div_menu_sup{
+    background-color: #EEF0F6;
+    margin-left: 13.5%;
+    height: 50%;
+    width: 60%;
+    margin-top: 1%;
+    padding: 1% 0 0 0;
+}
+#section_div_menu_sup #menu_rotas_content{
+    margin-left: 13%;
+    margin-top: -2%;
+    height: 100%;
+
+}
+#section_div_menu_sup #menu_rotas_content ul a li{
+
+    background-color: #BDC3CC;
+    border-radius: 5%;
+    width:25%;
+    height: 40px;
+    margin-left: 1%;
+    display: inline-block;
+    vertical-align: top;
+}
+#section_div_menu_sup #menu_rotas_content ul a.active li{
+
+    background-color: #DBE4FE;
+
+}
+#section_div_menu_sup #menu_rotas_content ul a:not(.active) li:hover {
+	background-color: #DBE4FE;
+}
+#section_div_menu_sup #menu_rotas_content ul li{
+    height: 40%;
+}
+#section_div_menu_sup #menu_rotas_content ul li:hover{
+    background-color: #A7B4C8;
+}
+#section_div_menu_sup #menu_rotas_content ul a li p {
+    font-size:15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    color:#5D6772;
+    margin-top: 5%;
+}
+#section_div_menu_sup #menu_rotas_content ul li
+{
+    margin-top: 6%;
+}
+#div_menu_superior p{
+    margin-left: 15%;
+    margin-top: -11%;
+
+}
+#wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 1000px;
+  }
+
+  #main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: 300ms ease all;
+    -transition: 300ms ease all;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 3% 6%;
+  }
+
+  .show-nav #main {
+    -webkit-transform: translateX(300px);
+    transform: translateX(300px);
+    -webkit-transform: translate3d(300px,0,0);
+    transform: translate3d(300px,0,0);
+  }
+
+  #nav {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -300px;
+    background: #5D6772;
+    padding: 25px;
+    color: #fff;
+  }
+
+  .btn-close {
+    color: #fff;
+    font-size: 25px;
+    border: 2px solid #fff;
+    padding: 1px 11px 4px 10px;
+    width: 38px;
+    margin-bottom: 20px;
+    display: block;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+ #menu_rotas ul li{
+     list-style: none;
+     margin-top: 9%;
+    
+ }
+ #menu_rotas ul li a{
+    color: #fff;
+ }
+/*Menus - Responsividade aos botões*/
+/*Corpo*/
+#menu_superior_submenu{
+
+}
+ #corpo{
+     height: 80%;
+ }
+ #corpo form{
+ }
+.inputTable {
+     margin-left: 8%;
+     margin-top: -2%
+     
+ }
+ .inputTable a{
+     margin-top: -5%;
+     margin-left: -35%;
+ }
+ .imgDel{
+     width: 20px;
+     height: 20px;
+ }
+ #corpo form .inputCaixa{
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     font-size: 17px;
+     color:  #5D6772;
+     margin:0.25em;
+     
+ }
+ #corpo form input[type="submit"]{
+    background: transparent;
+    border: none;
+    outline: 0;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #5D6772;
+    font-size: 14px;
+    background: #D7E6F8;
+    padding: 10px 25px;
+    cursor:pointer;
+    border-radius: 5px;
+    margin-top: 20%;
+    cursor: pointer;
+    margin-left: 5%;
+ }
+ #corpo form input[type="submit"]:hover{
+    background: beige;
+    outline:0;
+    box-shadow:none;
+ }
+  #input {
+     outline:none;
+     box-shadow:none;
+ }
+.inputCaixa input{
+    width: 78%;
+    min-width: 45%;
+    padding: 5px 0;
+    font-size: 16px;
+    color:#5D6772;
+    background: #EAECEE;
+    border: none;
+ }
+/*Corpo*/
+/*Estilo página de login*/
+#bodyLogin{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: lightcyan;
+    background-size: cover;
+}
+.box{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    min-width: 30%;
+    padding: 40px;
+    background: lightseagreen;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+}
+.box h2
+{
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+.box .inputBox
+{
+    position: relative;
+}
+.box .inputBox input
+{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color:#fff;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.box .inputBox label
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color:#ffff;
+    pointer-events: none;
+    transition: .5s;
+}
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label
+{
+    top: -18px;
+    left: 0;
+    color: aqua;
+    font-size: 12px;
+}
+.box input[type="submit"]
+{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: aqua;
+    padding: 10px 20px;
+    cursor:pointer;
+    border-radius: 5px;
+}
+/*Estilo página de login*/
+/*Checkbox sair - estilizado*/
+.liga-desliga{
+    margin-left: 70%;
+    margin-top: 1%;
+}
+.liga-desliga_checkbox{
+    position: absolute;
+    left: -9999px;
+}
+.liga-desliga_botao{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.liga-desliga_botao::before,
+.liga-desliga_botao::after
+{
+    content: "";
+    transition: all 0.3s ease;
+}
+.liga-desliga_botao::before{
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    background: #900;
+    border-radius: 1em;
+}
+.liga-desliga_botao::after{
+    position: absolute;
+    top: 0.025em;
+    left: 0.025em;
+    width: 0.95em;
+    height: 0.95em;
+    background: #fff;
+    border-radius: 100%;
+}
+
+.liga-desliga_checkbox:checked + .liga-desliga_botao::before{
+
+    background: #5d0;
+}
+.liga-desliga_checkbox:checked + .liga-desliga_botao::after{
+    left: 1.025em;
+}
+.sair{
+    min-width: 20%;
+    height: 10em;
+    border-radius: 2%;
+    box-shadow: #999 0 0 15px;
+    margin-left: -20%;
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    background: white;
+}
+.sair #container{
+    border: #C4C4C4 1px solid;
+    height: 30%;
+    background: #F5F5F5;
+    text-align: center;
+    
+}
+#perfil_user{
+     height: 70%;
+     width: 100%;
+     text-align: center;
+}
+.opcoes
+{
+    margin-top: 5%;
+    border: 1px #C6C6C6 solid;
+    display: inline-block;
+    width: 35%;
+    height: 45%;
+    background: #F8F8F8;
+}
+.opcoes:hover{
+    background: #FDFDFD;
+    box-shadow: #999 0 0 2px;
+    cursor: pointer;
+}
+#mudar{
+    margin-left: 10%;
+}
+#container a{
+    text-align: center;
+}
+a > div{
+    color: #666666;
+    font-size: 11px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Geneva, Tahoma, sans-serif;
+}
+/*Checkbox sair - estilizado code*/
+/*Corpo da página de dados*/
+#corpo_dados{
+    width: 100%;
+    height: 100%;
+    margin-top: 6%;
+}
+#informacoes{
+     margin-left: 20.5%;
+     min-width: 40%;
+     height: 100%;
+}
+.dados
+{
+   width: 100%;
+   height: 5%;
+   background: #F8F8F8;
+   border: 1px #C6C6C6 solid;
+   text-align: center;
+   color: #5D6772;
+}
+.dados:hover
+{
+    background: #FDFDFD;
+    box-shadow: #999 0 0 2px;
+    cursor: pointer;
+}
+.boxes{
+    display: inline-block;
+}
+
+
+/*Div*/
+
+#DivLateral{
+    position:relative;
+    border-width:2px;
+    min-width:40%;
+    height: 100%;
+    background-color:#F5F5F5;
+    float: left;
+}
+#DivA{
+    position: relative;
+    border-width:2px;
+    min-width: 20%;
+    height: 100%;
+    left:0px;
+    float: left;
+}
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+} 
+.group:after {
+    clear: both;
+}
+.group {
+     width: 100%;
+     height: 100%;
+}
+
+/*Corpo da página de dados*/
+/*Corpo da tabela de rotas*/
+#corpo{
+
+    margin-top: -5%;
+}
+#tabelaRotas{
+    border:  1px solid white;
+    margin-left: 20%;
+    margin-top: 6%;
+}
+th,td{
+  padding: 0.1em 1em;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Geneva, Tahoma, sans-serif;
+  color: #5D6772;
+  font-size: 20px;;
+}
+table {
+  border-collapse: collapse;
+  width: 15em;
+  border: 1px solid #666;
+}
+/*Fim do Corpo da tabela de rotas*/
+/* Table Base */
+
+  table {
+    max-width: 67%;
+    margin-left: 4%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: arial;
+    margin-top: 1%;
+  }
+
+  .table {
+    border-bottom: #999999 solid 1px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .table th,
+  .table td {
+    border-right: #999999 solid 1px;
+    font-size: 12px;
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .table td:last-child {
+     border-right: 0;
+  }
+
+  .table thead th {
+    font-weight: normal;
+    background-color: #999999;
+    color: #fff;
+    font-size: 15px;
+  }
+
+  .table tbody > tr:nth-child(odd) > td,
+  .table tbody > tr:nth-child(odd) > th {
+    background-color: #f8f8f8;
+  }
+
+
+/* Small Sizes */
+@media (max-width: 767px) { 
+  
+  /* Responsive Table */
+  .table-responsive {
+    display: block;
+    position: relative;
+    min-width: 72%;
+  }
+
+  .table-responsive thead,
+  .table-responsive tbody,
+  .table-responsive th,
+  .table-responsive td,
+  .table-responsive tr {
+    display: block;
+  }
+  .table-responsive td,
+  .table-responsive th {
+    height: 35px;
+  }
+
+  .table-responsive thead {
+    float: left;
+  }
+
+  .table-responsive tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+  .table-responsive tbody tr {
+    display: inline-block;
+  }
+
+  
+  .table td:last-child {
+     border-right: #999999 solid 1px;
+  }
+
+
+}
+/*Ajustes*/
+
+
+#corpo{
+    margin-left: 10%;
+}
+#content{
+    margin-left: 5%;
+}
+form{
+    display:flex;
+    flex-wrap: wrap;
+    width: 72%;
+    margin-left: 3.5%;
+}
